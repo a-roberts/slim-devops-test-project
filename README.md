@@ -1,5 +1,5 @@
 # node
-A generated Bluemix application
+A generated Bluemix application - testing, testing
 
 This is a slim test application only.
 

@@ -3,8 +3,8 @@
 replicaCount: 1
 revisionHistoryLimit: 1
 image:
-  repository: registry.ng.bluemix.net/replace-me-namespace/node
-  tag: v1.0.0
+  repository: mycluster.icp:8500/ns2/node
+  tag: a9d20ea
   pullPolicy: IfNotPresent
   resources:
     requests:
@@ -17,22 +17,3 @@ service:
   name: Node
   type: NodePort
   servicePort: 3000
-hpa:
-  enabled: false
-  minReplicas: 1
-  maxReplicas: 2
-  metrics:
-    cpu:
-      targetAverageUtilization: 70
-    memory:
-      targetAverageUtilization: 70
-services:
-base:
-  enabled: false
-  replicaCount: 1
-  image:
-    tag : v0.9.9
-  weight: 100
-istio:
-  enabled: false
-  weight: 100
